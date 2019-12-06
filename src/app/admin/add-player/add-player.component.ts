@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PlayerService } from 'src/app/services/player.service';
+import { player } from 'src/app/services/player';
 
 @Component({
   selector: 'app-add-player',
@@ -7,7 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddPlayerComponent implements OnInit {
 
-  constructor() { }
+  play: player = {
+    status: "",
+    name: "",
+    gender: "",
+    playerType: "",
+    playerImages: "",
+    baseValue: "",
+    sellPrice: ""
+  };
+  constructor(private playerService:PlayerService) { }
 
   ngOnInit() {
   }

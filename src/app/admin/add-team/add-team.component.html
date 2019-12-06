@@ -1,1 +1,21 @@
-<p>add-team works!</p>
+<div class="container-fluid">
+    <form onsubmit="saveData()">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" value="" class="form-control" placeholder="Name" aria-describedby="helpId">
+          <small id="helpId" class="text-muted">Enter your Full Name</small>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Select Team Owner:</label>
+            <select name="soption" [(ngModel)]="selectedplayer" class="form-control selcls" required>
+                <!-- <option *ngFor="let v of rarr" [value]="v.vid">{{}}</option> -->
+            </select>
+        </div>
+        <div class="form-group">
+          <label for="baseValue">Fund</label>
+          <input type="number" name="teamFund" id="teamFund" class="form-control" placeholder="Team Fund" aria-describedby="helpId">
+          <small id="helpId" class="text-muted">Enter Team Fund</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

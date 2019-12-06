@@ -3,6 +3,7 @@ import { Router } from "@angular/router";
 import { PlayerService } from "../services/player.service";
 import { player } from "../services/player";
 import { team } from '../services/team';
+import { TeamService } from '../services/team.service';
 
 @Component({
   selector: "app-auction",
@@ -23,7 +24,7 @@ export class AuctionComponent implements OnInit {
   teamArr =[{}];
   teamsList: team = {name:"",owner:"",teamFund:"",players:""};
 
-  constructor(private routes: Router, private playerServices: PlayerService) {}
+  constructor(private routes: Router, private playerServices: PlayerService, private teamServices: TeamService) {}
 
   ngOnInit() {
     let context = this;

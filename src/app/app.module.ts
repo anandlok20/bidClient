@@ -7,6 +7,10 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { AuctionComponent } from './auction/auction.component';
 import { TeamViewComponent } from './team-view/team-view.component';
 import { AdminComponent } from './admin/admin.component';
+import { AddPlayerComponent } from './admin/add-player/add-player.component';
+import { AddTeamComponent } from './admin/add-team/add-team.component';
+import { PlayerService } from './services/player.service';
+import { TeamService } from './services/team.service';
 
 @NgModule({
   declarations: [
@@ -14,13 +18,15 @@ import { AdminComponent } from './admin/admin.component';
     HomePageComponent,
     AuctionComponent,
     TeamViewComponent,
-    AdminComponent
+    AdminComponent,
+    AddPlayerComponent,
+    AddTeamComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [PlayerService,TeamService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

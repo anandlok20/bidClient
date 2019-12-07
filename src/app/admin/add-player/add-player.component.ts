@@ -23,4 +23,8 @@ export class AddPlayerComponent implements OnInit {
   ngOnInit() {
   }
 
+  saveData(){
+    console.log(this.play);
+  }
+
 }

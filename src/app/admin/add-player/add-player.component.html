@@ -1,19 +1,20 @@
+<app-admin></app-admin>
 <div class="container-fluid">
-    <form onsubmit="saveData()">
+    <form>
         <div class="form-group">
           <label for="name">Name</label>
-          <input type="text" name="name" id="name" value="" class="form-control" placeholder="Name" aria-describedby="helpId">
+          <input type="text" name="name" id="name" [(ngModel)]="play.name" class="form-control" placeholder="Name" aria-describedby="helpId">
           <small id="helpId" class="text-muted">Enter your Full Name</small>
         </div>
         <div class="form-check form-check-inline">
             <label class="form-check-label">
-                <input class="form-check-input" type="radio" name="gender" id="male" value="male"> Male
-                <input class="form-check-input" type="radio" name="gender" id="female" value="female"> Female
+                <input class="form-check-input" [(ngModel)]="play.gender" type="radio" name="gender" id="male" value="male"> Male
+                <input class="form-check-input" [(ngModel)]="play.gender" type="radio" name="gender" id="female" value="female"> Female
             </label>
         </div>
         <div class="form-group">
           <label for="playerType">Preferences</label>
-          <select multiple class="form-control" name="playerType" id="playerType">
+          <select multiple class="form-control" [(ngModel)]="play.playerType" name="playerType" id="playerType">
             <option>Batsman</option>
             <option>Bowler</option>
             <option>Wicketkeeper</option>
@@ -23,14 +24,14 @@
         </div>
         <div class="form-group">
           <label for="playerImage">Image</label>
-          <input type="file" class="form-control-file" name="playerImages" id="playerImages" placeholder="Images" aria-describedby="fileHelpId">
+          <input type="file" class="form-control-file" [(ngModel)]="play.playerImages" name="playerImages" id="playerImages" placeholder="Images" aria-describedby="fileHelpId">
           <small id="fileHelpId" class="form-text text-muted">Upload a profile</small>
         </div>
         <div class="form-group">
           <label for="baseValue">Base Value</label>
-          <input type="number" name="baseValue" id="baseValue" class="form-control" placeholder="Base Value" aria-describedby="helpId">
+          <input type="number" name="baseValue" id="baseValue" [(ngModel)]="play.baseValue" class="form-control" placeholder="Base Value" aria-describedby="helpId">
           <small id="helpId" class="text-muted">Enter Player Base Price</small>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" onclick="saveData()">Submit</button>
     </form>
 </div>

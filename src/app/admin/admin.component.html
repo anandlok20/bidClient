@@ -1,9 +1,18 @@
-<div class="jumbotron">
-    <h1 class="display-3">EPL</h1>
-    <p class="lead">Enzigma Premier League</p>
-    <hr class="my-2">
-</div>
-<div class="container-fluid">
-    <button type="button" class="btn btn-dark"><a [routerLink]="[ '/addPlayer']">Add Player</a></button>
-    <button type="button" class="btn btn-dark"><a [routerLink]="[ '/addTeam']">Add Team</a></button>
-</div>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1 class="display-3">EPL</h1>
+        <p class="lead">Enzigma Premier League</p>
+        <hr class="my-2">
+        <p class="lead">
+            <a class="btn btn-primary btn-lg" [routerLink]="['/addPlayer']" role="button">Add Player</a>
+            <a class="btn btn-primary btn-lg" [routerLink]="['/addTeam']" role="button">Add Team</a>
+        </p>
+    </div>
+</body>

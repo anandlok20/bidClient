@@ -8,17 +8,22 @@ import { player } from './player'
 })
 export class PlayerService {
 
-  url = "http://localhost:3000/";
+  url = "http://localhost:3000/player";
   constructor(private http: HttpClient) {}
 
-  getAllEvents():Observable<player[]> {
-    console.log("In event list type method");
-    return this.http.get<player[]>(this.url+'player');
+  getAllPlayer():Observable<player[]> {
+    console.log("In player list type method");
+    return this.http.get<player[]>(this.url);
   }
 
-  saveEvent(p:player){
-    console.log("In Register event method", p);
-    return this.http.post<player[]>(this.url+'player' , p);
+  getAllPlayerForBid():Observable<player[]> {
+    console.log("In player bid list type method");
+    return this.http.get<player[]>(this.url+"/bid");
+  }
+
+  savePlayer(p:player){
+    console.log("In Register players method", p);
+    return this.http.post<player[]>(this.url , p);
   }
 
 }

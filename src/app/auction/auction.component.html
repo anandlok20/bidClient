@@ -1,9 +1,11 @@
-<ng-template *ngFor="let item of playerArr">
+<div><h1>EPL</h1></div><br />
+<div class="cards">
     <div class="card text-left">
-        <img class="card-img-top" src={{item.playerImages}} alt="">
+        <img class="card-img-top" src="{{images}}" alt="">
         <div class="card-body">
-            <h4 class="card-title">item.name</h4>
-            <p class="card-text">item.playerType</p>
+          <h4 class="card-title">{{playerArr.name}}</h4>
+          <p class="card-text">{{playerArr.playerType}}</p>
         </div>
-    </div>
-</ng-template>
+        <button class="btn btn-dark">Bid</button>
+      </div>
+</div>

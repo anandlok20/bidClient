@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { PlayerService } from 'src/app/services/player.service';
 import { player } from 'src/app/services/player';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-player',
@@ -9,22 +10,24 @@ import { player } from 'src/app/services/player';
 })
 export class AddPlayerComponent implements OnInit {
 
+  playArr=[{}]
   play: player = {
-    status: "",
+    status: 0,
     name: "",
     gender: "",
     playerType: "",
     playerImages: "",
-    baseValue: "",
-    sellPrice: ""
+    baseValue: 0,
+    sellPrice: 0
   };
-  constructor(private playerService:PlayerService) { }
+  constructor(private playerService:PlayerService,private routes:Router) { }
 
   ngOnInit() {
   }
 
   saveData(){
-    console.log(this.play);
+    console.log("saving : ",this.play);
+    this.playerService.savePlayer(this.play).subscribe((r) => this.playArr = r);
   }
 
 }

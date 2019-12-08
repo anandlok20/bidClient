@@ -13,4 +13,8 @@ export class HomePageComponent implements OnInit {
   ngOnInit() {
   }
 
+  startAuction(){
+    this.route.navigate(['./auction']);
+  }
+
 }

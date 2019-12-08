@@ -13,22 +13,29 @@ import { TeamService } from '../services/team.service';
 export class AuctionComponent implements OnInit {
   playerArr = [{}];
   play: player = {
-    status: "",
+    status: Boolean,
     name: "",
     gender: "",
-    playerType: "",
+    playerType: [],
     playerImages: "",
-    baseValue: "",
-    sellPrice: ""
+    baseValue: 0,
+    sellPrice: 0
   };
-  teamArr =[{}];
-  teamsList: team = {name:"",owner:"",teamFund:"",players:""};
+  images = "";
+  teamArr = [{}];
+  teamsList: team = { name: "", owner: "", teamFund: "", players: "" };
 
-  constructor(private routes: Router, private playerServices: PlayerService, private teamServices: TeamService) {}
+  constructor(private routes: Router, private playerServices: PlayerService, private teamServices: TeamService) { }
 
   ngOnInit() {
-    let context = this;
-    this.playerServices.getAllEvents().subscribe(r => (context.playerArr = r));
-    console.log(this);
+    this.playerServices.getAllPlayerForBid().subscribe((r) => {
+    this.playerArr = r;
+    // this.images=this.playerArr;
+      console.log("init", this.playerArr);
+    });
+    this.teamServices.getAllTeam().subscribe((r) => {
+    this.teamArr = r;
+      console.log("init", this.teamArr);
+    });
   }
 }

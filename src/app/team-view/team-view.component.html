@@ -1,1 +1,14 @@
-<p>team-view works!</p>
+<table>
+    <!-- <ng-template *ngFor="let tA of teamArr"> -->
+    <thead>
+        <th *ngFor="let tA of teamArr">
+            <tr>{{tA.name}}</tr>
+        </th>
+    </thead>
+    <tbody>
+        <td *ngFor="let tP of teamArr">
+            <tr>{{tP.players}}</tr>
+        </td>
+    </tbody>
+<!-- </ng-template> -->
+</table>

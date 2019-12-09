@@ -1,11 +1,26 @@
-<div><h1>EPL</h1></div><br />
-<div class="cards">
-    <div class="card text-left">
-        <img class="card-img-top" src="{{images}}" alt="">
-        <div class="card-body">
-          <h4 class="card-title">{{playerArr.name}}</h4>
-          <p class="card-text">{{playerArr.playerType}}</p>
-        </div>
-        <button class="btn btn-dark">Bid</button>
-      </div>
+<div class="container-fluid"><div>
+  <h1>EPL</h1>
 </div>
+<div class="cards">
+  <div class="card text-left">
+    <img class="card-img-top" src="playerArr.playerImages" alt="">
+    <div class="card-body">
+      <h4 class="card-title">{{playerArr.name}}</h4>
+      <p class="card-text">{{playerArr.playerType}}</p>
+    </div>
+  </div>
+</div>
+<div style="position: relative;">
+  <input type="number" name="team1" id="team1" [(ngModel)]="team1" min="0" max=200000>
+  <button class="btn btn-dark">Team1 Bid</button>
+  <input type="number" name="team2" id="team2" [(ngModel)]="team2" min="0" max=200000>
+  <button class="btn btn-dark">Team2 Bid</button><br />
+  <input type="number" name="team3" id="team3" [(ngModel)]="team3" min="0" max=200000>
+  <button class="btn btn-dark">Team3 Bid</button>
+  <input type="number" name="team4" id="team4" [(ngModel)]="team4" min="0" max=200000>
+  <button class="btn btn-dark">Team4 Bid</button><br />
+  <input type="number" name="team5" id="team5" [(ngModel)]="team5" min="0" max=200000>
+  <button class="btn btn-dark">Team5 Bid</button>
+  <input type="number" name="team6" id="team6" [(ngModel)]="team6" min="0" max=200000>
+  <button class="btn btn-dark">Team6 Bid</button>
+</div></div>

@@ -24,17 +24,18 @@ export class AuctionComponent implements OnInit {
   images = "";
   teamArr = [{}];
   teamsList: team = { name: "", owner: "", teamFund: "", players: "" };
+  team1 = 0; team2 = 0; team3 = 0; team4 = 0; team5 = 0; team6 = 0;
 
   constructor(private routes: Router, private playerServices: PlayerService, private teamServices: TeamService) { }
 
   ngOnInit() {
     this.playerServices.getAllPlayerForBid().subscribe((r) => {
-    this.playerArr = r;
-    // this.images=this.playerArr;
+      this.playerArr = r;
+      // this.images=this.playerArr;
       console.log("init", this.playerArr);
     });
     this.teamServices.getAllTeam().subscribe((r) => {
-    this.teamArr = r;
+      this.teamArr = r;
       console.log("init", this.teamArr);
     });
   }

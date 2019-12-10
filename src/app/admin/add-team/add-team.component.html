@@ -2,9 +2,9 @@
 <div class="container-fluid">
     <form>
         <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" name="name" id="name" [(ngModel)]="teamsList.name" class="form-control" placeholder="Name" aria-describedby="helpId">
-          <small id="helpId" class="text-muted">Enter your Full Name</small>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" [(ngModel)]="teamsList.name" class="form-control" placeholder="Name" aria-describedby="helpId">
+            <small id="helpId" class="text-muted">Enter your Full Name</small>
         </div>
         <div class="form-group">
             <label class="control-label">Select Team Owner:</label>
@@ -13,9 +13,9 @@
             </select>
         </div>
         <div class="form-group">
-          <label for="baseValue">Fund</label>
-          <input type="number" name="teamFund" id="teamFund" [(ngModel)]="teamsList.teamFund" class="form-control" placeholder="Team Fund" aria-describedby="helpId">
-          <small id="helpId" class="text-muted">Enter Team Fund</small>
+            <label for="baseValue">Fund</label>
+            <input type="number" name="teamFund" id="teamFund" [(ngModel)]="teamsList.teamFund" class="form-control" placeholder="Team Fund" aria-describedby="helpId">
+            <small id="helpId" class="text-muted">Enter Team Fund</small>
         </div>
         <button (click)="saveTeam()" class="btn btn-primary">Submit</button>
     </form>

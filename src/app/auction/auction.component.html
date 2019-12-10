@@ -1,26 +1,24 @@
-<div class="container-fluid"><div>
-  <h1>EPL</h1>
-</div>
-<div class="cards">
-  <div class="card text-left">
-    <img class="card-img-top" src="playerArr.playerImages" alt="">
-    <div class="card-body">
-      <h4 class="card-title">{{playerArr.name}}</h4>
-      <p class="card-text">{{playerArr.playerType}}</p>
+<div class="container-fluid">
+    <div>
+        <h1>EPL</h1>
     </div>
-  </div>
+    <div class="cards">
+        <div class="card text-left">
+            <img class="card-img-top" src={{playerArr.playerImages}} alt="image">
+            <div class="card-body">
+                <h4 class="card-title">{{playerArr.name}}</h4>
+                <p class="card-text">{{playerArr.playerType}}</p>
+                <input type="text" id="t1" name="t1" value={{playerArr.baseValue}} hidden>
+            </div>
+        </div>
+    </div>
+    <div style="position: relative;">
+        <button class="btn btn-dark" id="bid1" (click)="team1data();count1=count1+1">Team1 Bid</button>
+        <button class="btn btn-dark" id="bid2" (click)="team2data();count2=count2+1">Team2 Bid</button><br />
+        <button class="btn btn-dark" id="bid3" (click)="team3data();count3=count3+1">Team3 Bid</button>
+        <button class="btn btn-dark" id="bid4" (click)="team4data();count4=count4+1">Team4 Bid</button><br />
+        <button class="btn btn-dark" id="bid5" (click)="team5data();count5=count5+1">Team5 Bid</button>
+        <button class="btn btn-dark" id="bid6" (click)="team6data();count6=count6+1">Team6 Bid</button><br />
+        <button class="btn btn-dark" (click)="selldata()">sell</button>
+    </div>
 </div>
-<div style="position: relative;">
-  <input type="number" name="team1" id="team1" [(ngModel)]="team1" min="0" max=200000>
-  <button class="btn btn-dark">Team1 Bid</button>
-  <input type="number" name="team2" id="team2" [(ngModel)]="team2" min="0" max=200000>
-  <button class="btn btn-dark">Team2 Bid</button><br />
-  <input type="number" name="team3" id="team3" [(ngModel)]="team3" min="0" max=200000>
-  <button class="btn btn-dark">Team3 Bid</button>
-  <input type="number" name="team4" id="team4" [(ngModel)]="team4" min="0" max=200000>
-  <button class="btn btn-dark">Team4 Bid</button><br />
-  <input type="number" name="team5" id="team5" [(ngModel)]="team5" min="0" max=200000>
-  <button class="btn btn-dark">Team5 Bid</button>
-  <input type="number" name="team6" id="team6" [(ngModel)]="team6" min="0" max=200000>
-  <button class="btn btn-dark">Team6 Bid</button>
-</div></div>

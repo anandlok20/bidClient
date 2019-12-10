@@ -6,11 +6,13 @@ import { AuctionComponent } from './auction/auction.component';
 import { AdminComponent } from './admin/admin.component';
 import { AddPlayerComponent } from './admin/add-player/add-player.component';
 import { AddTeamComponent } from './admin/add-team/add-team.component';
+import { AuctionViewComponent } from './auction-view/auction-view.component';
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent },
   { path: 'teamView', component: TeamViewComponent },
   { path: 'auction', component: AuctionComponent },
+  { path: 'auctionView', component: AuctionViewComponent },
   { path: 'admin', component: AdminComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'addPlayer', component:AddPlayerComponent},

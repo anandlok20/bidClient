@@ -13,6 +13,11 @@ import { AddTeamComponent } from './admin/add-team/add-team.component';
 import { PlayerService } from './services/player.service';
 import { TeamService } from './services/team.service';
 import { FormsModule } from '@angular/forms';
+import { AuctionViewComponent } from './auction-view/auction-view.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSelectModule } from '@angular/material/select';
+import { MatCardModule } from '@angular/material/card';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -22,13 +27,18 @@ import { FormsModule } from '@angular/forms';
     TeamViewComponent,
     AdminComponent,
     AddPlayerComponent,
-    AddTeamComponent
+    AddTeamComponent,
+    AuctionViewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatSelectModule,
+    MatCardModule,
+    MatTableModule
   ],
   providers: [PlayerService, TeamService],
   bootstrap: [AppComponent]

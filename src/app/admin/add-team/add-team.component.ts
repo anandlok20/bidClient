@@ -24,7 +24,7 @@ export class AddTeamComponent implements OnInit {
     baseValue: 0,
     sellPrice: 0
   };
-  teamsList: team = { name: "", owner: "", teamFund: "", players: "" };
+  teamsList: team = { name: "", owner: "", teamFund: "", players: [] };
   constructor(private teamServices: TeamService, private playerService: PlayerService, private routes: Router) { }
 
   ngOnInit() {
